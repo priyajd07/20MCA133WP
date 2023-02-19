@@ -1,0 +1,30 @@
+<html>
+<body>
+<h2>String Predefined Functions & Math Object </h2>
+<p id="ans1"></p>
+<p></p>
+<script>
+	document.write("<br><H3>String Functions</h3>");
+	var text = "Javascript is Simple.!";
+	document.write("<br>The String We Are Using : "+text);
+	var textre = text.replace("Simple","Powerfull");
+	document.write("<br><br>String Function Replace <b>'text.replace'</b> : "+textre);
+	var length = text.length;
+	document.write("<br><br>String Function length <b>'text.length'</b> : "+length);
+	var sliced= text.slice(14, 20);
+	document.write("<br><br>String Function Slicing <b>'text.slice(14,20)'</b> : "+sliced);
+	var upper = text.toUpperCase();
+	document.write("<br><br>String Function UpperCase <b>'text.toUpperCase'</b> : "+upper);
+
+	document.write("<br><BR><BR><H3>Math Objects</h3>");
+	var c =Math.ceil(3.5);
+	document.write("<BR>Math Object Ceil <b>'Math.ceil(3.5)'</b> : "+c);
+	var f =Math.floor(3.5);
+	document.write("<BR><br>Math Object Floor <b>'Math.floor(3.5)'</b> : "+f);
+	var po = Math.pow(8,2);
+	document.write("<BR><br>Math Object Power <b>'Math.pow(8,2)'</b> : "+po);
+	var pi=Math.PI;
+	document.write("<BR><br>Math Object PI <b>'Math.PI'</b> : "+pi);
+</script>
+</body>
+</html>

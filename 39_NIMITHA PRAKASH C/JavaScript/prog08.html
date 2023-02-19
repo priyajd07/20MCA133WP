@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  <script>
+       function registration()
+   	{
+        var name= document.getElementById("t1").value;
+        var phone= document.getElementById("t2").value;
+        var g1=document.getElementById("g1").checked;
+        var g2=document.getElementById("g2").checked;
+        var g3=document.getElementById("g3").checked;
+        var comment= document.getElementById("c1").value;
+        var phoneno = /^\d{10}$/;
+        var letters = /^[A-Za-z]+$/;
+
+        if(name=='')
+        {
+            alert('Please enter your name.!');
+        }
+        else if(!letters.test(name))
+        {
+            alert('Name field required only alphabet characters.!');
+        }
+        else if(phone=='')
+        {
+            alert('Please enter your phone number.!');
+        }
+        else if (isNaN(phone))
+        {
+            alert('Invalid Phone Number.!');
+        }
+        else if (!phoneno.test(phone)) 
+        {
+           alert('Not Valid Phone Number (need 10 digits).!');
+        }
+        else if ((g1=="")&&(g2=="")&&(g3==""))
+        {
+           alert('You must select Gender');
+        }
+        else
+        {                                           
+            alert('Thank You for Registration & You are Redirecting to Website');
+        }
+    }
+  </script>
+  </head>
+    <body>
+    <center>
+    <h2>Register Form Validation</h2>
+    <form style="width:500px;position: relative;left: 500;" >
+    <fieldset  " >
+    <legend>Validation</legend> 
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+    <tr>
+    <td align="right">Enter Name :</td>
+    <td><input type="text" placeholder="Enter name here" id="t1"></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Phone Number :</td>
+    <td><input type="text" placeholder="Enter Phone Number here" id="t2"> </td>
+    </tr>
+    <tr>
+    <td align="right">Gender :</td>
+    <td><input type="radio" name="gender" value="male" id="g1"> Male
+        <input type="radio" name="gender" value="female" id="g2"> Female
+        <input type="radio" name="gender" value="other" id="g3"> Other</td>
+    </tr>
+    <tr>
+    <td align="right">Comment :</td>
+    <td><textarea cols="20" rows="5" name="comment" id="c1"></textarea></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>
+    <input type="reset" value="Clear Form" id="res">
+    <input type="submit" value="Create Account" onclick="registration()" /></td>
+    </tr>
+    </table>
+    </fieldset>
+    </form>
+    </center>
+    </body>
+    </html>
